@@ -1,0 +1,53 @@
+Regression models i used in my project and results of them are : 
+
+LinearRegression Regressor 
+    -> RMSE: 393.78, MAE: 301.32 R^2 : 0.44
+Random Forest Regressor 
+    -> RMSE: 200.76, MAE: 130.11 R^2 : 0.85
+XGBoost Regressor 
+    -> RMSE: 255.67, MAE: 188.03 R^2 : 0.76
+
+Classification models i used in my project and results of them are : 
+
+
+Logistic Regression Classifier 
+    -> Accuracy: 0.758, Precision: 0.759, Recall: 0.758, F1: 0.758
+    Confusion Matrix for Logistic Regression:
+    [[7420 2043]
+    [2527 6933]]
+                precision    recall  f1-score   support
+
+        LowRent       0.75      0.78      0.76      9463
+        HighRent       0.77      0.73      0.75      9460
+
+        accuracy                           0.76     18923
+    macro avg       0.76      0.76      0.76     18923
+    weighted avg       0.76      0.76      0.76     18923
+
+    Random Forest Classifier 
+        -> Accuracy: 0.912, Precision: 0.912, Recall: 0.912, F1: 0.912
+        Confusion Matrix for Random Forest:
+        [[8671  792]
+        [ 872 8588]]
+                    precision    recall  f1-score   support
+
+            LowRent       0.91      0.92      0.91      9463
+            HighRent       0.92      0.91      0.91      9460
+
+            accuracy                           0.91     18923
+            macro avg       0.91      0.91      0.91     18923
+            weighted avg       0.91      0.91      0.91     18923
+
+XGBoost Classifier 
+    -> Accuracy: 0.868, Precision: 0.868, Recall: 0.868, F1: 0.868
+    Confusion Matrix for XGBoost:
+    [[8391 1072]
+    [1429 8031]]
+                precision    recall  f1-score   support
+
+        LowRent       0.85      0.89      0.87      9463
+        HighRent       0.88      0.85      0.87      9460
+
+        accuracy                           0.87     18923
+    macro avg       0.87      0.87      0.87     18923
+    weighted avg       0.87      0.87      0.87     18923
