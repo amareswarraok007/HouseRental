@@ -1,0 +1,26 @@
+
+Numeric features:
+
+bath_count, bed_count, area_in_sqft, geo_lat, geo_lon,
+feat_Parking, feat_Pool, feat_Gym, feat_Patio/Deck, feat_Washer Dryer,
+feat_Storage, feat_Clubhouse, feat_Dishwasher, feat_AC, feat_Fireplace,
+feat_Refrigerator, feat_Cable or Satellite, feat_Playground, feat_Internet Access,
+feat_Wood Floors, feat_Gated, feat_Tennis, feat_TV, feat_Elevator, feat_Basketball,
+amenity_count, beds_to_baths_ratio
+
+Categorical features
+
+Keep only the meaningful ones:
+
+city, region_code, pet_policy, payment_schedule,
+service_fee_applicable, image_available
+
+
+
+remove :
+headline, formatted_rent_text, street_address, data_provider,
+listing_category  (if it’s derived from rent and used as target),
+any ID or text column
+
+✅ Keep → numeric + clean categorical columns
+❌ Remove → text, address, duplicate, or ID columns
