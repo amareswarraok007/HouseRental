@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.gauge-ring {
+  background: conic-gradient(#22c55e var(--score), #1f2937 0deg);
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}

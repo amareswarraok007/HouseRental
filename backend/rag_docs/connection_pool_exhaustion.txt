@@ -1,0 +1,4 @@
+Title: Payment pool exhaustion after deployment
+Symptoms: Sudden latency spike, payment timeouts, and failed orders after a payment service deployment.
+Root Cause: Connection pool exhaustion due to increased concurrency and unbounded retries in v3.2.x.
+Mitigation: Increase pool size, add circuit breaker, backoff retries, roll back deploy.
