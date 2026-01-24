@@ -1,0 +1,4 @@
+Title: Cache miss spike in checkout
+Symptoms: Gradual latency increase and CPU saturation without deployment changes.
+Root Cause: Cache invalidation bug or eviction policy misconfiguration.
+Mitigation: Restore cache warmup, tune TTLs, scale cache nodes.
