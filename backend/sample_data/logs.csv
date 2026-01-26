@@ -1,0 +1,5 @@
+timestamp,service,level,message
+2024-07-01T09:56:00Z,payment,INFO,Deploying version 3.2.1
+2024-07-01T10:03:00Z,payment,ERROR,Timeout acquiring database connection from pool
+2024-07-01T10:04:00Z,payment,ERROR,Payment gateway request timed out
+2024-07-01T10:05:00Z,checkout,WARN,Payment step exceeded 5s latency
