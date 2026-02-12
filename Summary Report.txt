@@ -1,0 +1,101 @@
+                Summary Report                  
+
+In this file i am going to include the sections Steps taken,
+Challenges Faced , and Contributions section.
+
+->Steps Taken:
+
+
+    1.Dataset Loading and Inital Exploration
+    firstly we have  loaded the dataset and  made some initail exploaration of data 
+
+    2.Data Cleaning and Preprocessing 
+    -In this phase we have to give a cleaned data to ml model its just
+    like how we clean our clothes before we wear them
+    for this in terms of our dataset reality we also need to clean the 
+    dataset or data given for us so that if we give the data to model it 
+    gives us predicted and accurated results so some of the methods used in
+    the preprocessing are :
+        ->Identifying and  Handling  missing values in dataset
+
+        ->Test - parsing: we have Converted the  string  - formatted rent in 'monthly_rent'  columns (eg : '$$15,000/mo') into a purely numeric `monthly_rent`
+
+        ->Feature encoding : 
+            In this we have  done one  hot encoding too columns such as city, pet_policy and paymnet_schedule.
+
+            We have Converted some of columns such as image_available , service_fee_applicable columns into boolean flags like 0/1 integers.
+        
+        ->Scaling and Normalization : 
+            We have Standardized the continuos variables such as area_in_sqft, geo_lat, geo_lon .
+            why we have Standardized these variables so that no single feature dominated model training.
+    
+    3. Feature Engineering : 
+        -> In this section We have created and Transformed  and defined some new features to our model
+        thee features  are :
+            -Amenity Count: We have Transformed one of the feature that is `included_features` that  into an integer representing Count of amenities present.
+
+            -Bedroom - Bathroom Ratio: We have created  a new feature that is `beds_to_baths_ratio=(bed_count/bath_count)`, beacuse inordere to capture the efficieny of space.
+
+            -Rent Bucketing : We have implemented this featue tp the classifiaction based ml model it defined the bucket that is `HighRent` that indulge says whther the rennt classifies into a high or low rent.
+    
+    4.Exploratory Data Analysis :
+        ->We have plotted histograms of 'monthly_rent', stratified by city, inorder to visualize how rents vary geographically.
+
+        ->We have also Generated Box - plots of rent bedroom count and by amenity count to conifirm that more bedrooms/amenities generally correlated with higher rent
+
+        ->We have Produced a correlation matrix for numeric features, that verifies that 'area_in_sqft' and 'bed_count' were among strongest linear correlates of rent.
+    
+    5. The  Development Phase of Model:
+
+        -we have used two types of model for our project 
+
+            one is Classification and other is Regression models
+
+            because both has diiferent cases and different application but by combining both in a same notebook that in turns make some snense that
+            one thing is that i may will get exposure to difficulty situations in handling classification and  Regression usage in developing model and other is 
+            so we can create a clear way that it can be benefitted to such as realestate people , landlords , etc if we use them in both notebook so we make sure 
+            that this notebook is capable of real world application such as Assingming each listings into a discrete category and perdict a continuos value.
+    6. For the Evaluation and Interpretation of model :
+        we have used classification metrics  such as classification_report etc for classifiaction models
+
+        we have used  Regression metrics such as RMSE, R^ 2 etc for evaluating the rgression model
+
+-> Challenges Faced:
+I have faced alot problems in developing the machine learning for the given data set 
+some of them are : 
+    -Inconsistent Text Fields:
+        We have seen that 'formatted_rent_text' columns contains a mix of currency shymbols, that indulge leads to error.
+        so we have  used a robust parser  that took extra effort inorder to handle edge cases and remove waste characteres
+        before Converted to an integer.
+    - Missing and Inbalance in Data
+        -what i have observed is About 5-7 % of listings they are lack with 
+        `monthly_rent` or 'bedroom/bathroom' counts.Next i handled them after so many Steps
+        and series of experiments in handling of these kind of missing data
+
+        -The Imbalance in data i have observed in Rent Categories  by in their 60% of listings fell into the 'Mid-Tier' bucket,
+        30% intp 'Entry-level' and only 10% fall into 'Premium' Bucket. In order to counter this, 
+        we have used the stratified sampling during train/test splitting and weighted class into the classifier.
+
+    - The Outlier Management:
+        Some of the listings showed me extremely high or low rent relative to other features is this because duw to missing 
+        amenity data or overly ambitious pricing by landlords. TO overcome this we have done experiments with trimming the 
+        top and bottom 1% of rents to see if performance improved.
+
+->The Individual Contributions :
+    Data Preprocessing and Feature Engineering:
+        I have written allot of Python Scripts such as (using Pandas) inorder to clean inconsistent text formats, and some
+        parse `formatted_rent_text` and imputing the missing categorical Fields
+
+        I have also done some of the Engineering custom features , that may includes amenity counts, bedroom -bathroom ratio , 
+        and one - hot encoding for multi value Fields for (e.g. : pet_policy , city)
+
+    Exploratory Data Analysis (EDA)    :
+        We have generate some of the key plots such as histograms, box plots, correlation - heatmap etc inorder to highlight
+        the relationships between rent and primary predictors.
+
+    Model Development and  Tuning :
+        In this phase i have implemented the classifiaction model : the some of steps are  : 
+        splitting the data, training the multiple algorithms, conducting hyperparameter grid searches(optional), and evaluating
+        the final metrics
+    etc.
+

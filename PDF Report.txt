@@ -1,0 +1,48 @@
+1. Business Problem
+    As we know nowadays technology is growing rapidly , and data nowadays is increasing its size day by day.
+    As you know that Now Online rental - listing platforms often receive thousands of new properties ads each day. With so many options the Tenants may feel overwhelmed trying to find a home that fits their budget and needs .
+    And at the same time , the landlord and property managers may  want a data driven way to set a competitive moothly rent. By using machine learning algorithms, 
+    we can categorize the listings  and estimate fair market rents. So that it helps everyone _ renter s browse more effiviently and owners price their listings
+    accurately.
+
+    -> The project aim is to buil a machine learning model that can perform a combination of both classification and regression model , for classifiation model we assigns each listing to categories and for a regressison model we predicts the exact amount of rentf for each listings,  using property features like no of bedrooms, square footage, lovation and amenities.
+
+2. Methodology:
+    For this project we have used the following steps in order to achieve desired results by building a machine learning model:
+    -> Data Collection 
+
+    -> Data Overview
+    
+    -> Data Cleaning and preprocessing
+         -Handling Missing Values
+         -Feature Engineering
+    
+    ->Exploratory Data Analysis
+
+        -Distribution Visualiztion  such as histogram, boxplot , scatterplot etc such as for monthly_rent and area_in_sqft to see their overall range , skewness , distributions.
+
+        -Corelation Analysis
+            -we have used heatmap to seee corelation between the features and target variables.
+
+        -Categorical Data Analysis:    
+            -we have used the countplot to seee the distributions of categoricalvaribles such as property_type, furnishing_status,amd city .
+
+     ->   Model Building  and Evaluation
+           - We have used the following models for classification  and regression tasks,
+           - For classification tasks, we have used models such as Logistic Regression, Random Forest Classifier, and Gradient Boosting Classifier.
+           - For regression tasks, we have used models such as Linear Regression, Random Forest Regressor, and Gradient Boosting Regressor.
+
+           -we have used the following metrics to evaluate the performance of models:
+               -for classifiation task, we have used accuracy, precision ,recall,f1-score, and confusion matrx.
+               -for regression task, we have used mean absolute error , mean sqaured error , and r2 score.
+
+
+3. Insights:
+   -The classifiation model achieve an accuracy of about 85% on test data, that indicates that model is able to classify the listings into catgories with a good accuracy.
+   the classifiation helps power search filters and recommendatios for users, that makes it easier for them to find the listings that matched their needs.
+
+   -The regression model achieves a mean absolute error of about 188 to 300 on test data, that indicates that model is able to predict the monthly_rent with a good accuracy.
+   The regression model helps the landlords and property managers, rent estimates  that are competitive and fair, that helps them to set the right price for their listings.
+
+    THis model can be used to power the online rental listing platforms, that helps users to finds the listings that matched their needs and helps landlors to set right price for their listings.
+
